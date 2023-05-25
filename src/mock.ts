@@ -4,7 +4,7 @@ export const user: UserType = {
 	id: 1,
 	name: "Peter",
 	role: "Admin",
-	password: "1111111",
+	password: "password",
 	email: "peter@peter.com"
 };
 
