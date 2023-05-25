@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { userLogin } from "../../requests/userLogin";
 import css from "./index.module.css";
 import { logIn } from "../../redux/slices/authSlice";
+import { Logo } from "../../component";
 
 interface LoginFormValues {
 	email: string;
@@ -36,56 +37,62 @@ export default function LoginPage() {
 	};
 
 	return (
-		<div className={css.formWrapper}>
-			<Formik
-				initialValues={{ email: "", password: "" }}
-				validationSchema={validationSchema}
-				onSubmit={handleSubmit}
-			>
-				<Form className={css.form}>
-					<div className={css.inputWrapper}>
-						<div className={css.fieldWrapper}>
-							<label htmlFor="email">Email</label>
-							<Field
-								className={css.field}
-								type="email"
-								id="email"
-								name="email"
-								placeholder={"Email"}
-							/>
-							<ErrorMessage
-								name="email"
-								component="div"
-								className={css.error}
-							/>
+		<>
+			<div className={css.formWrapper}>
+				<Formik
+					initialValues={{ email: "", password: "" }}
+					validationSchema={validationSchema}
+					onSubmit={handleSubmit}
+				>
+					<Form className={css.form}>
+						<div className={css.inputWrapper}>
+							<div className={css.fieldWrapper}>
+								<label htmlFor="email">Email</label>
+								<Field
+									className={css.field}
+									type="email"
+									id="email"
+									name="email"
+									placeholder={"Email"}
+								/>
+								<ErrorMessage
+									name="email"
+									component="div"
+									className={css.error}
+								/>
+							</div>
+
+							<div  className={css.fieldWrapper}>
+								<label htmlFor="password">Password</label>
+								<Field
+									className={css.field}
+									type="password"
+									id="password"
+									name="password"
+									placeholder={"Password"}
+								/>
+								<ErrorMessage
+									name="password"
+									component="div"
+									className={css.error}
+								/>
+							</div>
 						</div>
 
-						<div  className={css.fieldWrapper}>
-							<label htmlFor="password">Password</label>
-							<Field
-								className={css.field}
-								type="password"
-								id="password"
-								name="password"
-								placeholder={"Password"}
-							/>
-							<ErrorMessage
-								name="password"
-								component="div"
-								className={css.error}
-							/>
-						</div>
-					</div>
+						{loginError ? (
+							<div className={css.errorWrapper}>
+								{loginError}
+							</div>
+						) : null}
 
-					{loginError ? (
-						<div className={css.errorWrapper}>
-							{loginError}
-						</div>
-					) : null}
+						<button className={css.button} type="submit">Login</button>
+					</Form>
+				</Formik>
+			</div>
 
-					<button className={css.button} type="submit">Login</button>
-				</Form>
-			</Formik>
-		</div>
+			<div className={css.logo}>
+				<Logo/>
+			</div>
+		</>
 	);
 }
