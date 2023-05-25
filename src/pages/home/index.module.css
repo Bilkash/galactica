@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background-color: #28292b;
+}
+
+.sidebar {
+    width: 240px;
+    height: calc(100vh - 70px);
+    background-color: #28292b;
+}
+
+.content {
+    display: flex;
+}

@@ -1,0 +1,48 @@
+.wrapper {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 15px;
+    margin-left: 12px;
+}
+
+.text {
+    color: #939495;
+    font-size: 14px;
+}
+
+.wrapper_active {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #7789EA;
+    border-radius: 10px;
+    gap: 20px;
+    padding-left: 15px;
+    margin-left: 12px;
+}
+
+.text_active {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.icon {
+    width: 17px;
+}
+
+.divider {
+    width: 205px;
+    height: 1px;
+    background-color: #333539;
+    margin-left: 15px;
+}
+
+.logOut {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.searchWrapper {
+    width: 380px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    background: #222325;
+    border-radius: 10px;
+}

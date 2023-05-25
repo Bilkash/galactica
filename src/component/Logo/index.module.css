@@ -1,0 +1,8 @@
+.logoWrapper{
+    height: 70px;
+    width: 215px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    border-right: 1px solid #202225;
+}
